@@ -1,0 +1,161 @@
+body {
+  background-image: url(../img/signup.png);
+  background-size: cover;
+  /* 繰り返し表示を防ぐ */
+  /* 幅と高さを指定する */
+  position: absolute;
+}
+
+.header-logo {
+  color: var(--pink);
+  position: absolute;
+  font-family: "Yellowtail";
+  font-size: 180px;
+  text-shadow: 6px 6px 0px #b7afb0;
+  /* 上 | 右 | 下 | 左 */
+  margin: 0 0.2em 0 0.6em;
+  padding-top: 0.2em;
+  padding-left: 0.2em;
+  letter-spacing: 0.1em;
+}
+
+.registration-main {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  /* フォントをMontserratに変更 */
+  font-family: "Montserrat", sans-serif;
+  line-height: 1em;
+  text-align: center;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-align: left;
+  font-weight: 900;
+  font-size: 100px;
+  line-height: 1em;
+  padding-top: 0.2em;
+  padding-left: 0.1em;
+  margin-right: 1em;
+}
+
+/* 背景画像を差し替え予定 */
+.registration-main.signup-main {
+  background-image: url("../img/brick-wall.jpg");
+}
+
+/* 背景画像を差し替え予定 */
+.registration-main.login-main {
+  background-image: url("../img/green.jpg");
+}
+
+/* フォーム上のLOG IN*/
+.registration-title {
+  color: var(--light_blue);
+  font-size: 45px;
+  margin-bottom: 0;
+  margin: 0;
+  margin-right: 4em;
+}
+
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: end;
+  min-width: 65%;
+  margin-top: -5px;
+}
+
+
+.registration-form input {
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  line-height: 50px;
+  width: 526px;
+  padding-bottom: 1px;
+  padding-left: 10px;
+  font-size: smaller;
+}
+
+.registration-form input:hover {
+  padding-bottom: 0;
+  border-bottom: 1px lightgrey solid;
+}
+
+.registration-form input:focus {
+  padding-bottom: 0;
+  border-bottom: 1px grey solid;
+}
+
+button {
+  margin-right: 0;
+}
+
+/* loginボタン*/
+button.green {
+  background-color: var(--light_blue);
+  transition: .3s;
+  width: 526px;
+  margin-top: 24px;
+}
+
+button.green:hover {
+  background-color: var(--blue);
+}
+
+/* signupボタン*/
+button.pink {
+  background-color: var(--light_blue);
+  transition: .3s;
+  width: 526px;
+  margin-top: 20px;
+}
+
+
+button.pink:hover {
+  background-color: var(--blue);
+}
+
+
+/* Not Registered yet?*/
+.switch-register-mode {
+  color: grey;
+  line-height: 45px;
+  font-size: smaller;
+  font-weight: 400;
+  padding-bottom: 1px;
+}
+
+/* Not Registered yet? ホバーした時*/
+.switch-register-mode:hover {
+  color: var(--carbon);
+  border-bottom: 1px solid var(--carbon);
+  padding-bottom: 0;
+}
+
+.flashes {
+  line-height: 40px;
+  margin-top: 0;
+  position: fixed;
+  right: 40px;
+  bottom: 20px;
+  text-align: center;
+  font-size: 18px;
+  color: red;
+}
+
+@media only screen and (min-width: 640px) and (max-width: 1023px) {
+  .registration-main {
+    font-size: 150px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .registration-main {
+    font-size: 150px;
+  }
+}

@@ -1,0 +1,208 @@
+.chat-box {
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--snow);
+  box-shadow: 0 0 10px var(--wood);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  padding-left: 50px;
+}
+
+#chat-header {
+  background-color: var(--white);
+  height: 8vh;
+  width: calc(50vw - 60px);
+  position: fixed;
+  top: 0;
+  color: var(--black);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-left: 20px;
+  z-index: 2;
+  box-shadow: 10px 10px 20px 0px var(--grey);
+}'
+
+#chatroom-name {
+  font-size: larger;
+}
+
+/* メッセージエリア */
+/* 白いラインの原因 */
+#message-area {
+  min-height: 80vh;
+  width: 40%;
+  margin-left: auto;
+  padding-top: calc(10vh + 20px);
+  padding-right: 10px;
+  padding-bottom: calc(20vh + 5px);
+  padding-left: 10px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  max-width: -webkit-calc(100% - 60px);
+  max-width: calc(100% - 60px);
+}
+
+.user-name {
+  font-size: 8px;
+  color: var(--white);
+}
+
+.my-messages {
+  display: flex;
+}
+
+.delete-message-btn {
+  background-color: var(--light-blue);
+  height: 40px;
+  width: 40px;
+  line-height: 47px;
+  padding: 0;
+  margin: 0;
+  bottom: 8px;
+  right: 8px;
+}
+
+.delete-message-btn ion-icon {
+  font-size: 1rem;
+}
+
+.box {
+  position: relative;
+  max-width: calc(100% - 90px);
+  width: 80%;
+  margin: 0;
+  padding: 0.7em 0 0.4em 1em;
+  border-radius: 10px;
+  color: var(--black);
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+}
+
+.box-left {
+  float: left;
+  border: 0.5px solid var(--white);
+  background-color: var(--light-blue);
+}
+
+.box-right {
+  float: right;
+  border: 0.5px solid var(--white);
+  background-color: var(--white);
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.box-left:before {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: 2px solid #333;
+  content: "";
+}
+
+.box-right:before {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: 2px solid #333;
+  content: "";
+}
+
+/* ========================================================== */
+
+.typing-box-wrapper {
+  position: fixed;
+  bottom: 0;
+  width: calc(40vw - 40px);
+  height: 10vh;
+  background-color: trandparent;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background-size: contain;
+  padding-left: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.typing-box {
+  height: 65%;
+  width: 90%;
+  margin: auto;
+  padding-left: 40px;
+  position: relative;
+  background-color: var(--white);
+  border-radius: 16px;
+}
+
+.typing-box textarea {
+  background-color: transparent;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  width: 100%;
+  padding: 4px 55px 4px 12px;
+  border-radius: 16px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.typing-box textarea:focus {
+  cursor: pointer;
+}
+
+#add-message-btn {
+  position: absolute;
+  background-color: var(--white);
+  height: 40px;
+  width: 40px;
+  line-height: 47px;
+  padding: 0;
+  margin: 0;
+  bottom: 5px;
+  left: -50px;
+}
+
+#add-message-btn ion-icon {
+  margin-top: 8px;
+  font-size: 1.3rem;
+}
+
+@media screen and (max-width: 639px) {
+  .chat-box {
+    padding-left: 0;
+  }
+
+  .typing-box-wrapper,
+  #chat-header {
+    width: 100%;
+  }
+
+  .typing-box textarea {
+    padding: 10px;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  .box {
+    width: 100%;
+  }
+}

@@ -1,0 +1,160 @@
+.channelpage {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  z-index:1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: top;
+}
+
+.channel-title {
+  display: flex;
+  gap: 14px;
+  font-size: 20px;
+  margin-top: 40px;
+}
+
+.channel-title button {
+  margin: 30px 0;
+  color: var(white);
+  background-color: var(--blue);
+  font-size: 20px;
+}
+
+.channel-title button:hover {
+  background-color: blue;
+}
+.channel-title button:active {
+  background-color: blue;
+}
+
+.channel-box {
+  background-color: transparent;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  min-height: 50%;
+  width: calc(30vw - 30px);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.channel-box li {
+  list-style: none;
+  margin-bottom: 5px;
+  padding-bottom: 3px;
+  padding-right: 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid white;
+}
+
+.channel-box li:hover {
+  border-bottom: 1px solid li white;
+  padding-bottom: 2px;
+  cursor: pointer;
+}
+
+.channel-box li a {
+  color: white;
+  font-weight: bold;
+}
+
+.channel-box li a:hover {
+  color: blue;
+}
+
+.pagination-container,
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination-container {
+  width: 100%;
+}
+
+.pagination {
+  padding-left: 0px;
+  padding-bottom: 40px;
+}
+
+.pagination li.colored {
+  background-color: black;
+  color: black;
+}
+
+#prev,
+#next,
+.pagination li {
+  padding: 16px ;
+}
+
+#prev:hover,
+#next:hover {
+  cursor: pointer;
+}
+
+.prev:hover .next:hover {
+  cursor: pointer;
+  background-color: black;
+  color: black;
+}
+
+
+@media screen and (max-width: 639px) {
+  .main-content {
+    width: 90vw;
+  }
+  .channel-title {
+    flex-direction: column;
+    gap: 0;
+  }
+  .channel-title h1 {
+   text-align: center;
+  }
+  .channel-box {
+    width: 100%;
+  }
+  .channel-box li a {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 640px) and (max-width: 1023px) {
+  .main-content {
+    width: 70vw;
+  }
+  .channel-title {
+    flex-direction: column;
+  }
+  .channel-title h1 {
+    text-align: center;
+  }
+  .channel-box {
+    width: 80%;
+  }
+  .channel-box li a {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main-content {
+    width: 70vw;
+  }
+  .channel-title {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .channel-box {
+    width: 80%;
+  }
+}

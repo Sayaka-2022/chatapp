@@ -1,0 +1,39 @@
+{% extends 'registration/base.html' %}
+<!--タイトル-->
+{% block title %}
+<title>login</title>
+{% endblock %}
+<!--ここからボディ-->
+{% block body %}
+<body>
+ <!--ロゴ-->
+  <h1 class="header-logo">POP.</h1>
+  <div class="registration-wrapper login">
+  <!--背景画像<img src="../static/img/signup.png'/>-->
+    <!--フォーム部分・サンプルそのまま-->
+    <div class="registration-wrapper login">
+      <div class="registration-main login-main">
+        LOGIN
+        <!--<div class="half-circle green">-->
+        <form class="registration-form" method="post">
+          <h1 class="registration-title">LOG IN</h1>
+          <input type="text" placeholder="Email" name="email" />
+          <input type="password" placeholder="Password" name="password" />
+          <button class="green">LOG IN</button>
+          {% with messages = get_flashed_messages() %} {% if messages %}
+          <ul class="flashes">
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %} {% endwith %}
+          <a class="switch-register-mode" href="{{ url_for('signup') }}">
+            Not registered yet?
+          </a>
+        </form>
+        <!--</div>-->
+      </div>
+    </div>
+  </div>
+</body>
+{% endblock %}

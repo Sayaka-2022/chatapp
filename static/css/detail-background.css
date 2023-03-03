@@ -1,0 +1,4 @@
+body:not(.index){
+    background-image: url(../img/adriel-kloppenburg-S1XAf3JxOLI-unsplash.jpg);
+    background-size: cover;
+}    
